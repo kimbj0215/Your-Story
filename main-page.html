@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHDP Full Calendar</title>
+    <link rel="stylesheet" href="main-page.css">
+</head>
+<body>
+    <div class="calendar">
+        <div class="today-schedule">
+  <h3>오늘 일정</h3>
+  <ul class="schedule-list"></ul>
+  <div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <label>날짜 선택: <input type="date" id="schedule-date"></label>
+    <label>일정 내용: <input type="text" id="schedule-text"></label>
+    <button onclick="saveSchedule()">저장</button>
+    <button onclick="closeModal()">닫기</button>
+  </div>
+</div>
+
+    </div>
+
+        <div class="header">
+            <div class="year-month"></div>
+            <div class="nav">
+                <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                <button class="nav-btn go-today" onclick="goToday()">Today</button>
+                <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+              </div>
+              <button class="ns">new schedule</button>
+              <button class="ds">delete schedule</button>
+        </div>
+        <div class="main">
+            <div class="days">
+                <div class="day">일</div>
+                <div class="day">월</div>
+                <div class="day">화</div>
+                <div class="day">수</div>
+                <div class="day">목</div>
+                <div class="day">금</div>
+                <div class="day">토</div>
+            </div>
+            <div class="dates"></div>
+        </div>
+    </div>
+    <script src="main-page.js"></script>
+</body>
+</html>
